@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+	<files>
+		<path>media/clothing/clothingItems/Bag_TraumaBackpack.xml</path>
+		<guid>9d77969f-d317-437d-8fbe-35adf43db270</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_TraumaBackpack_LHand.xml</path>
+		<guid>18a378b4-1dfd-4779-b6e4-08c920d6c62a</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_TraumaBackpack_RHand.xml</path>
+		<guid>c6288673-5554-4353-8c80-00ef3a8b05f9</guid>
+	</files>
+</fileGuidTable>

@@ -1,0 +1,27 @@
+module MxBackpacks {
+    imports {
+        Base
+    }
+
+    item Bag_TraumaBackpack
+    {
+        Type = Container,
+        DisplayName = Trauma Backpack,
+        ClothingItem = Bag_TraumaBackpack,
+        CanBeEquipped = Back,
+        WeightReduction	=	87,
+        Weight	=	2,
+        Capacity	=	28,
+        Icon	=	TraumaBackpack,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BloodLocation = Bag,
+        RunSpeedModifier = 0.94,
+        CanHaveHoles = false,
+        AttachmentReplacement = Bag,
+        ReplaceInSecondHand = Bag_TraumaBackpack_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_TraumaBackpack_RHand holdingbagright,
+        WorldStaticModel = ALICE_Pack_Ground,
+    }
+}

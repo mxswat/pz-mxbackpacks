@@ -1,0 +1,5 @@
+version=1
+title=Mx Backpacks
+description=This is the description of Mx Backpacks.
+tags=
+visibility=public
