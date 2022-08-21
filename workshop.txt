@@ -16,5 +16,5 @@ description=-SurvivalistTruckBed
 description=-DoctorTruckBed
 description=-AmbulanceTruckBed
 description=-AmbulanceTruckBed
-tags=
+tags=Build 41;Clothing/Armor;Items;Misc;Models;Multiplayer;Realistic;Textures
 visibility=public
