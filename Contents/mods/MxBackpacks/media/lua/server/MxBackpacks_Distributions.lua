@@ -1,9 +1,9 @@
 local DistTable = {
-    "MxBackpacks.Bag_TraumaBackpack", 1.25,
+    "MxBackpacks.Bag_TraumaBackpack", 1,
 }
 
 local VehicleDistTable = {
-    "MxBackpacks.Bag_TraumaBackpack", 1.25,
+    "MxBackpacks.Bag_TraumaBackpack", 1,
 }
 
 local function insertTable(gameList, mylist)
@@ -14,6 +14,7 @@ local function insertTable(gameList, mylist)
 end
 
 insertTable(ProceduralDistributions["list"]["ArmyStorageMedical"].items, DistTable)
+insertTable(ProceduralDistributions["list"]["ArmySurplusBackpacks"].items, DistTable)
 insertTable(ProceduralDistributions["list"]["MedicalClinicDrugs"].items, DistTable)
 insertTable(ProceduralDistributions["list"]["MedicalClinicTools"].items, DistTable)
 insertTable(ProceduralDistributions["list"]["MedicalStorageDrugs"].items, DistTable)
