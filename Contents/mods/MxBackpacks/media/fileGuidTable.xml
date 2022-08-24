@@ -12,4 +12,12 @@
 		<path>media/clothing/clothingItems/Bag_TraumaBackpack_RHand.xml</path>
 		<guid>c6288673-5554-4353-8c80-00ef3a8b05f9</guid>
 	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_MedFannyPackBack.xml</path>
+		<guid>ac926e36-36d7-4662-a1c9-163ae9c48c8d</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_MedFannyPackFront.xml</path>
+		<guid>7fbd43f8-862f-44fc-be78-5b1540c0e1e3</guid>
+	</files>
 </fileGuidTable>

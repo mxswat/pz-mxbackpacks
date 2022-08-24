@@ -24,4 +24,48 @@ module MxBackpacks {
         ReplaceInPrimaryHand = Bag_TraumaBackpack_RHand holdingbagright,
         WorldStaticModel = ALICE_Pack_Ground,
     }
+
+    item Bag_MedFannyPackFront
+    {
+        DisplayCategory = Bag,
+        WeightReduction	=	50,
+        ClothingItemExtra = Bag_FannyPackBack,
+        ClothingItemExtraOption = FannyPack_WearBack,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        Weight	=	0.2,
+        Type	=	Container,
+        Capacity	=	1,
+        DisplayName	=	Medical Fanny Pack (Front),
+        Icon	=	FannyPack,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_FannyPackFront,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.98,
+        WorldStaticModel = FannyPack_Ground,
+    }
+
+    item Bag_MedFannyPackBack
+    {
+        DisplayCategory = Bag,
+        WeightReduction	=	50,
+        ClothingItemExtra = Bag_FannyPackFront,
+        ClothingItemExtraOption = FannyPack_WearFront,
+        clothingExtraSubmenu = FannyPack_WearBack,
+        Weight	=	0.2,
+        Type	=	Container,
+        Capacity	=	1,
+        DisplayName	=	Medical Fanny Pack (Back),
+        Icon	=	FannyPack,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BodyLocation = FannyPackBack,
+        ClothingItem = Bag_FannyPackBack,
+        CanBeEquipped = FannyPackBack,
+        RunSpeedModifier = 0.98,
+        WorldStaticModel = FannyPack_Ground,
+    }
 }
