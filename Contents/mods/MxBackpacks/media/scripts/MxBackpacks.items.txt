@@ -70,4 +70,52 @@ module MxBackpacks {
         RunSpeedModifier = 0.98,
         WorldStaticModel = FannyPack_Ground,
     }
+
+    item Bag_MedFannyPackFront_Spec
+    {
+        DisplayCategory = Bag,
+        WeightReduction	=	95,
+        ClothingItemExtra = Bag_MedFannyPackBack_Spec,
+        ClothingItemExtraOption = FannyPack_WearBack,
+        clothingExtraSubmenu = FannyPack_WearFront,
+        Weight	=	0.2,
+        Type	=	Container,
+        Capacity	=	2,
+        DisplayName	=	Specialized Medical Fanny Pack (Front),
+        Icon	=	MedFannyPack,
+        IconsForTexture = MedFannyPack;MedFannyPack_Red;MedFannyPack_Blue,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BodyLocation = FannyPackFront,
+        ClothingItem = Bag_MedFannyPackFront,
+        CanBeEquipped = FannyPackFront,
+        RunSpeedModifier = 0.98,
+        WorldStaticModel = FannyPack_Ground,
+        AcceptItemFunction = MxAcceptItemFunction.MedicalOnly,
+    }
+
+    item Bag_MedFannyPackBack_Spec
+    {
+        DisplayCategory = Bag,
+        WeightReduction	=	95,
+        ClothingItemExtra = Bag_MedFannyPackFront_Spec,
+        ClothingItemExtraOption = FannyPack_WearFront,
+        clothingExtraSubmenu = FannyPack_WearBack,
+        Weight	=	0.2,
+        Type	=	Container,
+        Capacity	=	2,
+        DisplayName	=	Specialized Medical Fanny Pack (Back),
+        Icon	=	MedFannyPack,
+        IconsForTexture = MedFannyPack;MedFannyPack_Red;MedFannyPack_Blue,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BodyLocation = FannyPackBack,
+        ClothingItem = Bag_MedFannyPackBack,
+        CanBeEquipped = FannyPackBack,
+        RunSpeedModifier = 0.98,
+        WorldStaticModel = FannyPack_Ground,
+        AcceptItemFunction = MxAcceptItemFunction.MedicalOnly,
+    }
 }
