@@ -34,7 +34,7 @@ module MxBackpacks {
         clothingExtraSubmenu = FannyPack_WearFront,
         Weight	=	0.2,
         Type	=	Container,
-        Capacity	=	1.5,
+        Capacity	=	2,
         DisplayName	=	Medical Fanny Pack (Front),
         Icon	=	MedFannyPack,
         IconsForTexture = MedFannyPack;MedFannyPack_Red;MedFannyPack_Blue,
@@ -57,7 +57,7 @@ module MxBackpacks {
         clothingExtraSubmenu = FannyPack_WearBack,
         Weight	=	0.2,
         Type	=	Container,
-        Capacity	=	1.5,
+        Capacity	=	2,
         DisplayName	=	Medical Fanny Pack (Back),
         Icon	=	MedFannyPack,
         IconsForTexture = MedFannyPack;MedFannyPack_Red;MedFannyPack_Blue,
@@ -117,30 +117,5 @@ module MxBackpacks {
         RunSpeedModifier = 0.98,
         WorldStaticModel = FannyPack_Ground,
         AcceptItemFunction = MxAcceptItemFunction.MedicalOnly,
-    }
-
-    recipe Make Medical Fanny Pack
-  	{
-        [MxBagsRecipe.GetItemTypes.Bag_FannyPack],
-        FirstAidKit,
-
-        Result:Bag_MedFannyPackFront,
-        OnCreate:MxBagsRecipe.KeepContent,
-        Time:30.0,
-        AnimNode:Disassemble,	   
-        SkillRequired:Tailoring=1,	   
-        Category:Tailoring,
-    }
-
-    recipe Make Specialized Medical Fanny Pack
-  	{
-        Bag_MedFannyPackFront/Bag_MedFannyPackBack,
-
-        Result:Bag_MedFannyPackFront_Spec,
-        OnCreate:MxBagsRecipe.KeepTextureAndContent,
-        Time:30.0,
-        AnimNode:Disassemble,	   
-        SkillRequired:Tailoring=1,	   
-        Category:Tailoring,
     }
 }
