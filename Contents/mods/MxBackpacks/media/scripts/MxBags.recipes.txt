@@ -27,4 +27,4 @@ module MxBackpacks {
         SkillRequired:Tailoring=1,	   
         Category:Tailoring,
     }
-}s
+}

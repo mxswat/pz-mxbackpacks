@@ -1,9 +1,11 @@
 local DistTable = {
     "MxBackpacks.Bag_TraumaBackpack", 1,
+    "Bag_MedFannyPackFront", 2
 }
 
 local VehicleDistTable = {
     "MxBackpacks.Bag_TraumaBackpack", 1,
+    "Bag_MedFannyPackFront_Spec", 2
 }
 
 local function insertTable(gameList, mylist)
@@ -20,6 +22,10 @@ insertTable(ProceduralDistributions["list"]["MedicalClinicTools"].items, DistTab
 insertTable(ProceduralDistributions["list"]["MedicalStorageDrugs"].items, DistTable)
 insertTable(ProceduralDistributions["list"]["SafehouseMedical"].items, DistTable)
 insertTable(ProceduralDistributions["list"]["StoreShelfMedical"].items, DistTable)
+insertTable(ProceduralDistributions["list"]["HospitalLockers"].items, DistTable)
+insertTable(ProceduralDistributions["list"]["MedicalClinicOutfit"].items, DistTable)
+insertTable(ProceduralDistributions["list"]["MedicalStorageOutfit"].items, DistTable)
+insertTable(ProceduralDistributions["list"]["TestingLab"].items, DistTable)
 
 insertTable(VehicleDistributions.SurvivalistTruckBed.items, VehicleDistTable)
 insertTable(VehicleDistributions.DoctorTruckBed.items, VehicleDistTable)

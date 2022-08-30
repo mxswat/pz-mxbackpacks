@@ -12,13 +12,12 @@ function MxBagsRecipe.GetItemTypes.Bag_FannyPack(scriptItems)
 end
 
 function MxBagsRecipe.KeepContent(inputItems, resultItem, player)
-	local resultInv = resultItem:getInventory()
+	local player_Inventory = player:getInventory();
 
 	for i = 0, (inputItems:size() - 1) do
 		local item = inputItems:get(i);
 
 		if item:getCategory() == "Container" then
-			print('item:getName(): '..item:getName())
 			if player:getClothingItem_Back() == item then
 				player:setClothingItem_Back(nil);
 			end
@@ -30,7 +29,7 @@ function MxBagsRecipe.KeepContent(inputItems, resultItem, player)
 			end
 			local currentInv = item:getInventory()
 			if currentInv:getItems():size() >= 1 then
-				resultInv:getItems():addAll(currentInv:getItems())
+				player_Inventory:getItems():addAll(currentInv:getItems())
 				currentInv:getItems():clear()
 			end
 		end
@@ -38,7 +37,7 @@ function MxBagsRecipe.KeepContent(inputItems, resultItem, player)
 end
 
 function MxBagsRecipe.KeepTextureAndContent(inputItems, resultItem, player)
-	local texture = inputItems:get(1):getTexture()
+	local texture = inputItems:get(0):getTexture()
 	MxBagsRecipe.KeepContent(inputItems, resultItem, player)
 	resultItem:setTexture(texture);
 end
