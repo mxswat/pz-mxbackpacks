@@ -34,7 +34,7 @@ module MxBackpacks {
         clothingExtraSubmenu = FannyPack_WearFront,
         Weight	=	0.2,
         Type	=	Container,
-        Capacity	=	2,
+        Capacity	=	1.5,
         DisplayName	=	Medical Fanny Pack (Front),
         Icon	=	MedFannyPack,
         IconsForTexture = MedFannyPack;MedFannyPack_Red;MedFannyPack_Blue,
@@ -57,7 +57,7 @@ module MxBackpacks {
         clothingExtraSubmenu = FannyPack_WearBack,
         Weight	=	0.2,
         Type	=	Container,
-        Capacity	=	2,
+        Capacity	=	1.5,
         DisplayName	=	Medical Fanny Pack (Back),
         Icon	=	MedFannyPack,
         IconsForTexture = MedFannyPack;MedFannyPack_Red;MedFannyPack_Blue,
@@ -80,7 +80,7 @@ module MxBackpacks {
         clothingExtraSubmenu = FannyPack_WearFront,
         Weight	=	0.2,
         Type	=	Container,
-        Capacity	=	2,
+        Capacity	=	2.5,
         DisplayName	=	Specialized Medical Fanny Pack (Front),
         Icon	=	MedFannyPack,
         IconsForTexture = MedFannyPack;MedFannyPack_Red;MedFannyPack_Blue,
@@ -104,7 +104,7 @@ module MxBackpacks {
         clothingExtraSubmenu = FannyPack_WearBack,
         Weight	=	0.2,
         Type	=	Container,
-        Capacity	=	2,
+        Capacity	=	2.5,
         DisplayName	=	Specialized Medical Fanny Pack (Back),
         Icon	=	MedFannyPack,
         IconsForTexture = MedFannyPack;MedFannyPack_Red;MedFannyPack_Blue,
@@ -117,5 +117,31 @@ module MxBackpacks {
         RunSpeedModifier = 0.98,
         WorldStaticModel = FannyPack_Ground,
         AcceptItemFunction = MxAcceptItemFunction.MedicalOnly,
+    }
+
+    /*
+    recipe Make Medical Fanny Pack
+	{
+	   [MxBagsRecipe.GetItemTypes.Bag_FannyPack],
+       FirstAidKit
+
+	   Result:Bag_MedFannyPackFront,
+	   Time:50.0,
+	   SkillRequired:Tailoring=1,	   
+	   Category:Tailoring,
+	}
+    */
+
+    recipe Make Medical Fanny Pack
+  	{
+        Bag_FannyPackFront,
+        FirstAidKit,
+
+        Result:Bag_MedFannyPackBack_Spec,
+        Time:30.0,
+        AnimNode:Disassemble,	   
+        SkillRequired:Tailoring=1,	   
+        Category:Tailoring,
+        Tooltip:Tooltip_AttachBackpackTier3,
     }
 }
