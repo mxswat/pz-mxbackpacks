@@ -74,7 +74,7 @@ module MxBackpacks {
     item Bag_MedFannyPackFront_Spec
     {
         DisplayCategory = Bag,
-        WeightReduction	=	95,
+        WeightReduction	=	90,
         ClothingItemExtra = Bag_MedFannyPackBack_Spec,
         ClothingItemExtraOption = FannyPack_WearBack,
         clothingExtraSubmenu = FannyPack_WearFront,
@@ -98,7 +98,7 @@ module MxBackpacks {
     item Bag_MedFannyPackBack_Spec
     {
         DisplayCategory = Bag,
-        WeightReduction	=	95,
+        WeightReduction	=	90,
         ClothingItemExtra = Bag_MedFannyPackFront_Spec,
         ClothingItemExtraOption = FannyPack_WearFront,
         clothingExtraSubmenu = FannyPack_WearBack,
@@ -124,12 +124,23 @@ module MxBackpacks {
         [MxBagsRecipe.GetItemTypes.Bag_FannyPack],
         FirstAidKit,
 
-        Result:Bag_MedFannyPackBack_Spec,
+        Result:Bag_MedFannyPackFront,
         OnCreate:MxBagsRecipe.KeepContent,
         Time:30.0,
         AnimNode:Disassemble,	   
         SkillRequired:Tailoring=1,	   
         Category:Tailoring,
-        Tooltip:Tooltip_AttachBackpackTier3,
+    }
+
+    recipe Make Specialized Medical Fanny Pack
+  	{
+        Bag_MedFannyPackFront/Bag_MedFannyPackBack,
+
+        Result:Bag_MedFannyPackFront_Spec,
+        OnCreate:MxBagsRecipe.KeepTextureAndContent,
+        Time:30.0,
+        AnimNode:Disassemble,	   
+        SkillRequired:Tailoring=1,	   
+        Category:Tailoring,
     }
 }

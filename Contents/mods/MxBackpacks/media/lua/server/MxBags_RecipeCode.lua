@@ -2,51 +2,43 @@ MxBagsRecipe = MxBagsRecipe or {}
 MxBagsRecipe.GetItemTypes = {}
 
 function MxBagsRecipe.GetItemTypes.Bag_FannyPack(scriptItems)
-    local allScriptItems = getScriptManager():getAllItems();
-    for i = 1, allScriptItems:size() do
-        local scriptItem = allScriptItems:get(i - 1);
-        if string.contains(scriptItem:getName(), "Bag_FannyPack") then
-            scriptItems:add(scriptItem);
-        end
-    end
+	local allScriptItems = getScriptManager():getAllItems();
+	for i = 1, allScriptItems:size() do
+		local scriptItem = allScriptItems:get(i - 1);
+		if string.contains(scriptItem:getName(), "Bag_FannyPack") then
+			scriptItems:add(scriptItem);
+		end
+	end
 end
 
--- Remember me, untested
-function MxBagsRecipe.KeepContent(item, resultItem, player)
-    local player_Inventory = player:getInventory();
-	local transferred_Items = {}; 
-	local dItem;
-	local texture;
-	
-	for i = 0, (item:size()-1) do 
-		dItem = item:get(i); 
-		
-		if dItem:getCategory() == "Container" then 
-		texture = dItem:getTexture()
-			if player:getClothingItem_Back() == dItem then 
+function MxBagsRecipe.KeepContent(inputItems, resultItem, player)
+	local resultInv = resultItem:getInventory()
+
+	for i = 0, (inputItems:size() - 1) do
+		local item = inputItems:get(i);
+
+		if item:getCategory() == "Container" then
+			print('item:getName(): '..item:getName())
+			if player:getClothingItem_Back() == item then
 				player:setClothingItem_Back(nil);
 			end
-			if player:getPrimaryHandItem() == dItem then 
+			if player:getPrimaryHandItem() == item then
 				player:setPrimaryHandItem(nil);
 			end
-			if player:getSecondaryHandItem() == dItem then 
-				player:setSecondaryHandItem(nil); 
+			if player:getSecondaryHandItem() == item then
+				player:setSecondaryHandItem(nil);
 			end
-			dInv = dItem:getInventory(); 
-			newInv= resultItem:getInventory(); 
-			dInvItems = dInv:getItems(); 
-			if dInvItems:size() >= 1 then 
-				for i2 = 0, (dInvItems:size()-1) do
-					invItem = dInvItems:get(i2);
-					table.insert(transferred_Items, invItem) 
-				end
+			local currentInv = item:getInventory()
+			if currentInv:getItems():size() >= 1 then
+				resultInv:getItems():addAll(currentInv:getItems())
+				currentInv:getItems():clear()
 			end
 		end
 	end
-	
-	for i3, k3 in ipairs(transferred_Items) do
-		dInv:Remove(k3); 
-		newInv:AddItem(k3); 
-	end
+end
+
+function MxBagsRecipe.KeepTextureAndContent(inputItems, resultItem, player)
+	local texture = inputItems:get(1):getTexture()
+	MxBagsRecipe.KeepContent(inputItems, resultItem, player)
 	resultItem:setTexture(texture);
 end
