@@ -1,11 +1,11 @@
 local DistTable = {
     "MxBackpacks.Bag_TraumaBackpack", 1,
-    "Bag_MedFannyPackFront", 2
+    "MxBackpacks.Bag_MedFannyPackFront", 1
 }
 
 local VehicleDistTable = {
     "MxBackpacks.Bag_TraumaBackpack", 1,
-    "Bag_MedFannyPackFront_Spec", 2
+    "MxBackpacks.Bag_MedFannyPackFront_Spec", 1
 }
 
 local function insertTable(gameList, mylist)

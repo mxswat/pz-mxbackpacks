@@ -1,0 +1,2 @@
+furniture_storage_02.png
+location_military_generic_01.png
