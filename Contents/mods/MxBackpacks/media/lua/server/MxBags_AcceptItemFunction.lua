@@ -4,5 +4,7 @@ MxAcceptItemFunction = MxAcceptItemFunction or {}
 
 function MxAcceptItemFunction.MedicalOnly(container, item)
 	-- print(tostring(item:getScriptItem().Medical)) -- Apparently this does not work :-/
-	return item:getStringItemType() == "Medical" or item:getDisplayCategory() == "FirstAid"
+	return item:getStringItemType() == "Medical"
+		or item:getDisplayCategory() == "FirstAid"
+		or item:getDisplayCategory() == "Medical"
 end

@@ -7,5 +7,7 @@ description=- Medical Fanny Bag, it has 2 capacity compared to the Vanilla Fanny
 description=- Specialized Medical Fanny Bag, it has 3 capacity but allows ONLY MEDICAL items. (Craftable)
 description=
 description=You can find these inside various medical and military containers
+description=
+description=COMPATIBLE WITH BETTER SORTING
 tags=Build 41;Clothing/Armor;Items;Military;Misc;Models;Multiplayer;Realistic;Textures
 visibility=public
